@@ -1,0 +1,47 @@
+@use 'variables'as var;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @media screen and (width > var.$tablet-width) {
+
+    }
+
+    @media screen and (width > var.$desktop-width) {
+
+    }
+
+    &__title {
+        font-size: 2rem;
+        text-align: left;
+        margin-bottom: 20px;
+
+        @media screen and (width > var.$tablet-width) {
+        font-size: 3rem;
+        margin-bottom: 25px;
+        }
+    
+        @media screen and (width > var.$desktop-width) {
+            font-size: 4rem;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__text {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        background-color: transparent;
+        padding: 5px 15px;
+        width: 125px;
+        border-radius: 40px;
+        border: 1px solid var.$green-main;
+        margin-bottom: 20px;
+    }
+}

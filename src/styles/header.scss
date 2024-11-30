@@ -1,0 +1,15 @@
+@use 'variables'as var;
+
+.header {
+    padding-block: 12px;
+    padding-inline: 20px;
+    height: 110px;
+
+    @media screen and (width > var.$tablet-width) {
+        padding-block: 24px;
+    }
+
+    @media screen and (width > var.$desktop-width) {
+        padding-block: 48px;
+    }
+}

@@ -1,17 +1,38 @@
 export function generateHotels(hotels) {
-  const listHotels = document.createElement('ul');
+  const hotelsList = document.createElement('ul');
+  
   hotels.forEach(hotel => {
-    const itemHotel = document.createElement('li');
-    const imageHotel = document.createElement('img');
-    const titleHotel = document.createElement('h2');
+    const hotelItem = document.createElement('li');
+    const hotelImage = document.createElement('img');
+    const hotelSubtitle = document.createElement('p');
+    const hotelTitle = document.createElement('h2');
+    const hotelPrice = document.createElement('span');
+    const hotelRating = document.createElement('span');
 
-    imageHotel.setAttribute('src', hotel.img);
-    imageHotel.setAttribute('width', 300);
-    imageHotel.setAttribute('class', 'image__hotel');
-    titleHotel.textContent = hotel.title;
-    itemHotel.appendChild(imageHotel)
-    itemHotel.appendChild(titleHotel)
-    listHotels.appendChild(itemHotel)
+    hotelImage.setAttribute('src', hotel.img);
+    hotelImage.setAttribute('width', 300);
+    hotelImage.setAttribute('class', 'hotels__img');
+    hotelsList.setAttribute('class', 'hotels__list list-reset');
+    hotelItem.setAttribute('class', 'hotels__card');
+    hotelSubtitle.setAttribute('class', 'hotels__subtitle');
+    hotelTitle.setAttribute('class', 'hotels__title');
+    hotelPrice.setAttribute('class', 'hotels__price');
+
+
+
+    hotelTitle.textContent = hotel.title;
+    hotelSubtitle.textContent = hotel.subtitle;
+    hotelPrice.textContent = hotel.price;
+    hotelRating.textContent = hotel.rating;
+
+    hotelsList.appendChild(hotelItem)
+
+    hotelItem.appendChild(hotelImage)
+    hotelItem.appendChild(hotelSubtitle)
+    hotelItem.appendChild(hotelTitle)
+    hotelItem.appendChild(hotelPrice)
+    hotelItem.appendChild(hotelRating)
+
   });
-  document.querySelector('main').appendChild(listHotels)
+  document.querySelector('.hotels__slider').appendChild(hotelsList)
 }

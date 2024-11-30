@@ -1,0 +1,16 @@
+@use 'variables'as var;
+
+.container {
+    padding-inline: var.$mobile-padding-x;
+    max-width: 280px;
+
+    @media screen and (width > var.$tablet-width) {
+        padding-inline: var.$tablet-padding-x;
+        max-width: 680px;
+    }
+
+    @media screen and (width > var.$desktop-width) {
+        padding-inline: var.$desktop-padding-x;
+        max-width: 1280px;
+    }
+}

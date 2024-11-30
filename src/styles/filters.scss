@@ -1,0 +1,25 @@
+@use 'variables'as var;
+
+.filters {
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 20px;
+
+    }
+    
+    &__item {
+        padding-block: 5px;
+        width: 100%;
+        border: 1px dotted var.$green-main;
+    }
+
+    &__button {
+        padding: 5px 15px;
+        width: 125px;
+        border-radius: 40px;
+        background-color: var.$green-main;
+        color: #ffffff;
+    }
+}

@@ -1,0 +1,17 @@
+@use 'variables'as var;
+
+.text-secondary {
+
+    font-size: 1rem;
+    line-height: 1.55rem;
+    margin-bottom: 1rem;
+    color: #555555;
+
+    @media screen and (width > var.$tablet-width) {
+    }
+
+    @media screen and (width > var.$desktop-width) {
+        margin-bottom: 1.875rem;
+        line-height: 1.75rem;
+    }
+}

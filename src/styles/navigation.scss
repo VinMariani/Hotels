@@ -1,0 +1,72 @@
+@use 'variables'as var;
+
+.navigation {
+    height: 80px;
+
+    @media screen and (width > var.$tablet-width) {
+
+    }
+
+    @media screen and (width > var.$desktop-width) {
+        height: 40px;
+        max-width: 1280px;
+    }
+
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        @media screen and (width > var.$tablet-width) {
+            gap: 140px;
+            flex-wrap: nowrap;
+        }
+    
+        @media screen and (width > var.$desktop-width) {
+            gap: 326px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media screen and (width > var.$tablet-width) {
+
+        }
+    
+        @media screen and (width > var.$desktop-width) {
+
+            align-items: center;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 7px;
+
+        @media screen and (width > var.$tablet-width) {
+
+        }
+    
+        @media screen and (width > var.$desktop-width) {
+            padding: 15px;
+        }
+    }
+
+    &__button {
+        background-color: var.$green-main;
+        padding: 5px 8px;
+        border-radius: 35%;
+
+        @media screen and (width > var.$tablet-width) {
+
+        }
+    
+        @media screen and (width > var.$desktop-width) {
+            border-radius: 35%;
+        }
+    }
+}
