@@ -1,7 +1,9 @@
 @use 'variables'as var;
 
 .facilities {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
+
+    // padding-bottom: 20px;
 
     @media screen and (width > var.$tablet-width) {
         padding-bottom: 40px;

@@ -2,14 +2,14 @@
 
 .hotels {
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 
     @media screen and (width > var.$tablet-width) {
-        padding-bottom: 40px;
+        padding-bottom: 2rem;
     }
 
     @media screen and (width > var.$desktop-width) {
-        padding-bottom: 147px;
+        // padding-bottom: 147px;
     }
 
     &__wrapper {
@@ -74,6 +74,7 @@
         background-color: var.$white-secondary;
         margin-bottom: 15px;
         border-radius: 16px;
+        max-width: 100%;
 
         @media screen and (width > var.$tablet-width) {
             min-height: 480px;
@@ -89,7 +90,7 @@
     }
 
     &__img {
-        width: 280px;
+        width: 100%;
         text-align: center;
         margin-bottom: 10px;
 

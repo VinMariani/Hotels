@@ -14,7 +14,9 @@
         border-radius: 16px;
         position: relative;
 
-
+        @media screen and (width > var.$tablet-width) {
+            padding: 2.25rem;
+        }
 
         &::before {
             content: '';
@@ -115,8 +117,8 @@
         margin: 0 auto;
 
         @media screen and (width > var.$tablet-width) {
-            width: 200px;
-            height: 200px;
+            width: 230px;
+            height: 230px;
         }
     }
 

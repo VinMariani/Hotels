@@ -3,9 +3,12 @@
 .footer {
     padding-bottom: 1.25rem;
 
+    @media screen and (width > var.$tablet-width) {
+        padding-bottom: 2.25rem;
+    }
+
     &__wrapper {
         display: grid;
-        padding-inline: 1.25rem;
 
         @media screen and (width > var.$tablet-width) {
             grid-template-columns: repeat(3, 1fr);
@@ -17,7 +20,7 @@
 
     &__lists-wrapper {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
 
         @media screen and (width > var.$tablet-width) {

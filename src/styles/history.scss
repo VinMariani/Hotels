@@ -1,7 +1,7 @@
 @use 'variables'as var;
 
 .history {
-    padding-bottom: 1.25rem;
+    padding: 1.25rem;
     background-color: var.$green-bg;
     max-width: 280px;
     margin: 0 auto;
@@ -18,13 +18,12 @@
         margin-bottom: 40px;
         min-height: 377px;
         max-width: 645px;
-        padding: 1.25rem;
+        padding: 2.25rem;
     }
 
     &__wrapper {
         display: grid;
         justify-items: center;
-        padding: 1.25rem;
         padding-bottom: 0;
         border-radius: 16px;
 

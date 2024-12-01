@@ -10,6 +10,7 @@
     margin: 0 auto;
     margin-bottom: 20px;
     border-radius: 16px;
+    padding: 1.25rem;
 
 
     @media screen and (width > var.$tablet-width) {
@@ -22,6 +23,7 @@
         background-position: right;
         background-size: 50% 100%;
         margin-bottom: 40px;
+        padding: 2rem;
     }
 
     @media screen and (width > var.$desktop-width) {
@@ -30,8 +32,6 @@
     }
 
     &__wrapper {
-        padding-block: 1.25rem;
-
         @media screen and (width > var.$tablet-width) {
             max-width: 400px;
         }
@@ -66,6 +66,10 @@
     &__text {
         text-align: left;
         margin-bottom: 20px;
+
+        @media screen and (width > var.$tablet-width) {
+            max-width: 280px;
+        }
 
         @media screen and (width > var.$desktop-width) {
             max-width: 515px;
