@@ -1,0 +1,49 @@
+@use 'variables'as var;
+
+.socials {
+    padding-block: 10px;
+
+    &__text {
+        @media screen and (width > var.$tablet-width) {
+            grid-area: socials;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+    }
+
+    &__item {
+        width: 15px;
+        height: 20px;
+    }
+
+    &__link {
+        padding: 10px;
+        display: block;
+    }
+
+    &__link--fb {
+        background-image: url('../../public/assets/vectors/socials-fb.svg');
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position: center;
+    }
+
+    &__link--inst {
+        background-image: url('../../public/assets/vectors/socials-inst.svg');
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position: center;
+    }
+
+    &__link--google {
+        background-image: url('../../public/assets/vectors/socials-google.svg');
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position: center;
+    }
+}

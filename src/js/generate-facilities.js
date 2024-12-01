@@ -19,5 +19,5 @@ export function generateFacilities(facilities) {
         facilityItem.appendChild(facilityText);
     });
 
-    document.querySelector('.facilities__wrapper').appendChild(facilitiesList)
+    document.querySelector('.facilities__items-wrapper').appendChild(facilitiesList)
 }

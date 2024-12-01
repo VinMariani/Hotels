@@ -2,9 +2,14 @@
 
 .hotels {
     margin: 0 auto;
-    padding-bottom: 147px;
+    padding-bottom: 20px;
+
+    @media screen and (width > var.$tablet-width) {
+        padding-bottom: 40px;
+    }
 
     @media screen and (width > var.$desktop-width) {
+        padding-bottom: 147px;
     }
 
     &__wrapper {
@@ -13,20 +18,24 @@
         margin-bottom: 20px;
 
         @media screen and (width > var.$tablet-width) {
+            display: flex;
+            justify-content: space-between;
         }
     
-
     }
 
     &__button {
         padding: 5px 15px;
         width: 125px;
         border-radius: 40px;
-        background-color: var.$green-main;
-        color: #ffffff;
+        background-color: var.$green-bg;
+        color: var.$green-main;
         text-align: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
 
         @media screen and (width > var.$tablet-width) {
+            max-height: 40px;
         }
     
         @media screen and (width > var.$desktop-width) {
@@ -34,6 +43,11 @@
     }
 
     &__slider {
+
+        @media screen and (width > var.$tablet-width) {
+            overflow-y: hidden;
+            height: 400px;
+        }
 
         @media screen and (width > var.$desktop-width) {
             overflow-y: hidden;
@@ -46,6 +60,7 @@
 
         @media screen and (width > var.$tablet-width) {
             grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
         }
 
         @media screen and (width > var.$desktop-width) {
@@ -56,9 +71,15 @@
     }
 
     &__card  {
-        background-color: #FAFAFA;
+        background-color: var.$white-secondary;
         margin-bottom: 15px;
-        // padding: 16px 39px;
+        border-radius: 16px;
+
+        @media screen and (width > var.$tablet-width) {
+            min-height: 480px;
+            width: 332px;
+            margin-bottom: 0;
+        }
 
         @media screen and (width > var.$desktop-width) {
             min-height: 480px;
@@ -74,11 +95,12 @@
 
         @media screen and (width > var.$tablet-width) {
             width: 100%;
-            height: 320px;
+            height: 300px;
         }
 
         @media screen and (width > var.$desktop-width) {
             margin-bottom: 24px;
+            height: 320px;
         }
     }
 
@@ -93,16 +115,16 @@
         }
     }
 
-    &__title {
+    &__name {
 
         font-size: 1.1rem;
         line-height: 1.6rem;
-        margin-bottom: 0.625px;
+        margin-bottom: 0.625rem;
 
         @media screen and (width > var.$desktop-width) {
             font-size: 1.5rem;
             line-height: 1.875rem;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
     }
 

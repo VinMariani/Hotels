@@ -33,17 +33,19 @@
             <main class="main">
                 <section class="hero">
                     <div class="container">
-                        <h1 class="hero__title">Find your perfect place to stay</h1>
-                        <p class="hero__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <button class="button button-reset hero__button" type='button' title="Watch video">Watch video</button>
-                        <div class="hero__filters filters">
-                            <ul class="filters__list list-reset">
-                                <li class="filters__item filters--location">Location</li>
-                                <li class="filters__item filters--check-in">Check in</li>
-                                <li class="filters__item filters--check-out">Check out</li>
-                                <li class="filters__item filters--guests">Rooms for</li>
-                            </ul>
-                            <button class="button button-reset filters__button" type='button' title="Find hotel">Search...</button>
+                        <div class="hero__wrapper">
+                            <h1 class="hero__title">Find your perfect place to stay</h1>
+                            <p class="hero__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <button class="button button-reset hero__button" type='button' title="Watch video">Watch video</button>
+                            <div class="hero__filters filters">
+                                <ul class="filters__list list-reset">
+                                    <li class="filters__item filters--location">Location<span class="filters__details">United States</span></li>
+                                    <li class="filters__item filters--check-in">Check in<span class="filters__details">10 Jun 2021</span></li>
+                                    <li class="filters__item filters--check-out">Check out<span class="filters__details">15 Jun 2021</span></li>
+                                    <li class="filters__item filters--guests">Rooms for<span class="filters__details">1 room, 2 guests</span></li>
+                                </ul>
+                                <button class="button button-reset filters__button" type='button' title="Find hotel">Search...</button>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -61,34 +63,41 @@
                 </section>
                 <section class="facilities" id="facilities">
                     <div class="container">
-                        <h2 class="facilities__title title-secondary">We do our best facilities provide you</h2>
-                        <p class="facilities__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p>
-                        <button class="button button-reset facilities__button" type='button' title="Contact Now">Contact Now</button>
-                        <div class="facilities__wrapper"></div>
+                        <div class="facilities__wrapper">
+                            <h2 class="facilities__title title-secondary">We do our best facilities provide you</h2>
+                            <p class="facilities__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p>
+                            <button class="button button-reset facilities__button" type='button' title="Contact Now">Contact Now</button>
+                            <div class="facilities__items-wrapper"></div>
+                        </div>
                     </div>
                 </section>
                 <section class="history">
                     <div class="container">
-                        <h2 class="history__title title-secondary">Discover our History</h2>
-                        <p class="history__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        <button class="history__button button button-reset" type='button' title="Explore More">Explore More</button>
+                        <div class="history__wrapper">
+                            <h2 class="history__title title-secondary">Discover our History</h2>
+                            <p class="history__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            <button class="history__button button button-reset" type='button' title="Explore More">Explore More</button>
+                        </div>
                     </div>
                 </section>
-                <section class="guests">
+                <section class="feedback">
                     <div class="container">
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <p class="guests__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    <p class="guests__name">Alexandr Ivchenko</p>
-                                    <span class="guests__profession">Businessman</span>
-                                    <img src="" alt="Foto of Alexandr Ivchenko" class="guests__img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <p class="guests__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                    <p class="guests__name">Ivan Petrov</p>
-                                    <span class="guests__profession"></span>
-                                    <img src="" alt="Foto of Ivan Petrov" class="guests__img">
+                        <div class="feedback__wrapper">
+                            <h2 class="visually-hidden">Feedback from our guests</h2>
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <p class="feedback__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <p class="feedback__name">Alexandr Ivchenko</p>
+                                        <p class="feedback__profession">Businessman</p>
+                                        <img src="./public/assets/images/guests-AlexandrIvchenko.avif" alt="Foto of Alexandr Ivchenko" class="feedback__img" width="150" height="150">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p class="feedback__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        <p class="feedback__name">Ivan Ivanov</p>
+                                        <p class="feedback__profession"></p>
+                                        <img src="./public/assets/images/guests-IvanIvanov.avif" alt="Foto of Ivan Petrov" class="feedback__img" width="150" height="150">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -99,44 +108,48 @@
                         <div class="map__wrapper">
                             <h2 class="map__title title-secondary">Location of our Hotels</h2>
                             <p class="map__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-                            <input class="map__input" type="email" name="" id="" placeholder="Enter your email">
-                            <button class="map__button button button-reset" type='button' title="Contact">Contact</button>
+                            <div class="map__input-wrapper">
+                                <input class="map__input" type="email" name="" id="" placeholder="Enter your email">
+                                <button class="map__button button button-reset" type='button' title="Contact">Contact</button>
+                            </div>
                         </div>
                     </div>
                 </section>
             </main>
             <footer class="footer" id="footer">
                 <div class="container">
-                    <p class="footer__text text-secondary">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <div class="socials">
-                        <ul class="socials__list list-reset">
-                            <li class="socials__item"><a href="#" class="socials__link link-reset"><span class="visually-hidden">facebook</span></a></li>
-                            <li class="socials__item"><a href="#" class="socials__link link-reset"><span class="visually-hidden">instagram</span></a></li>
-                            <li class="socials__item"><a href="#" class="socials__link link-reset"><span class="visually-hidden">google</span></a></li>
-                        </ul>
-                    </div>
                     <div class="footer__wrapper">
-                        <ul class="footer__list list-reset">
-                            <li class="footer__item"><h3 class="footer__title">Home</h3></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Booking</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Facilities</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Location</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Contact</a></li>
-                        </ul>
-                        <ul class="footer__list list-reset">
-                            <li class="footer__item"><h3 class="footer__title">Help</h3></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">About Us</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Help center</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Privacy policy</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">FAQs</a></li>
-                        </ul>
-                        <ul class="footer__list list-reset">
-                            <li class="footer__item"><h3 class="footer__title">Get the app</h3></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">iOS app</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Android app</a></li>
-                        </ul>
+                        <p class="footer__text text-secondary">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                        <div class="socials">
+                            <ul class="socials__list list-reset">
+                                <li class="socials__item"><a href="#" class="socials__link socials__link--fb link-reset"><span class="visually-hidden">facebook</span></a></li>
+                                <li class="socials__item"><a href="#" class="socials__link socials__link--inst link-reset"><span class="visually-hidden">instagram</span></a></li>
+                                <li class="socials__item"><a href="#" class="socials__link socials__link--google link-reset"><span class="visually-hidden">google</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__lists-wrapper">
+                            <ul class="footer__list list-reset">
+                                <li class="footer__item"><h3 class="footer__title">Home</h3></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Booking</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Facilities</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Location</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Contact</a></li>
+                            </ul>
+                            <ul class="footer__list list-reset">
+                                <li class="footer__item"><h3 class="footer__title">Help</h3></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">About Us</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Help center</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Privacy policy</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">FAQs</a></li>
+                            </ul>
+                            <ul class="footer__list list-reset">
+                                <li class="footer__item"><h3 class="footer__title">Get the app</h3></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">iOS app</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Android app</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </footer>

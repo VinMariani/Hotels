@@ -15,7 +15,7 @@ export function generateHotels(hotels) {
     hotelsList.setAttribute('class', 'hotels__list list-reset');
     hotelItem.setAttribute('class', 'hotels__card');
     hotelSubtitle.setAttribute('class', 'hotels__subtitle');
-    hotelTitle.setAttribute('class', 'hotels__title');
+    hotelTitle.setAttribute('class', 'hotels__name');
     hotelPrice.setAttribute('class', 'hotels__price');
 
 

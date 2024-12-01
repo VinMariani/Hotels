@@ -8,6 +8,7 @@
     color: #555555;
 
     @media screen and (width > var.$tablet-width) {
+        margin-bottom: 1.5rem;
     }
 
     @media screen and (width > var.$desktop-width) {

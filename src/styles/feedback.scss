@@ -1,0 +1,124 @@
+@use 'variables'as var;
+
+.feedback {
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    @media screen and (width > var.$tablet-width) {
+        margin-bottom: 40px;
+    }
+
+    &__wrapper {
+        background-color: var.$white-secondary;
+        padding: 1.25rem;
+        border-radius: 16px;
+        position: relative;
+
+
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            background-image: url('../../public/assets/vectors/arrow-left.svg');
+            background-position: 0 3px;
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-color: var.$white-main;
+            border-radius: 50%;
+            top: 50%;
+            left: -10px;
+
+            @media screen and (width > var.$tablet-width) {
+                left: -11px;           
+            }
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            background-image: url('../../public/assets/vectors/arrow-right.svg');
+            background-position: 0 3px;
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-color: var.$white-main;
+            border-radius: 50%;
+            top: 50%;
+            right: -10px;
+
+            @media screen and (width > var.$tablet-width) {
+                right: -18px;
+            }
+        }
+    }
+
+    &__text {
+        margin-bottom: 0.7rem;
+        
+
+        &::before {
+            content: '';
+            display: block;
+            width: 13px;
+            height: 13px;
+            background-image: url('../../public/assets/vectors/feedback-before.svg');
+            background-repeat: no-repeat;
+            background-size: 13px 13px;
+            top: 0;
+            left: 0;
+            float: left;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 13px;
+            height: 13px;
+            background-image: url('../../public/assets/vectors/feedback-after.svg');
+            background-repeat: no-repeat;
+            background-size: 13px 13px;
+            top: 0;
+            left: 0;
+            float: right;
+        }
+    }
+
+    &__name {
+        margin-bottom: 0.2rem;
+        font-size: 1.1rem;
+        line-height: 1.75rem;
+        color: var.$black-secondary;
+
+        @media screen and (width > var.$desktop-width) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__profession {
+        font-size: 0.9rem;
+        line-height: 1.75rem;
+        color: var.$gray-555555;
+        margin-bottom: 1rem;
+
+        @media screen and (width > var.$desktop-width) {
+            font-size: 1rem;
+        }
+    }
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+
+        @media screen and (width > var.$tablet-width) {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+
+}

@@ -49,9 +49,11 @@
                 </section>
                 <section class="history">
                     <div class="container">
-                        <h2 class="history__title title-secondary">Discover our History</h2>
-                        <p class="history__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                        <button class="history__button button button-reset" type='button' title="Explore More">Explore More</button>
+                        <div class="history__wrapper">
+                            <h2 class="history__title title-secondary">Discover our History</h2>
+                            <p class="history__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            <button class="history__button button button-reset" type='button' title="Explore More">Explore More</button>
+                        </div>
                     </div>
                 </section>
                 <section class="questions">
@@ -85,51 +87,53 @@
                         </div>
                     </div>
                 </section>
-                <section class="map">
+                <section class="map" id="location">
                     <div class="container">
                         <div class="map__wrapper">
                             <h2 class="map__title title-secondary">Location of our Hotels</h2>
                             <p class="map__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-                            <form action="" method="post">
-                                <input class="map__input" type="email" name="email" id="email" placeholder="Enter your email" required>
-                                <button class="map__button button button-reset" type="submit">Contact</button>
-                            </form>
+                            <div class="map__input-wrapper">
+                                <input class="map__input" type="email" name="" id="" placeholder="Enter your email">
+                                <button class="map__button button button-reset" type='button' title="Contact">Contact</button>
+                            </div>
                         </div>
                     </div>
                 </section>
             </main>
-            <footer class="footer">
+            <footer class="footer" id="footer">
                 <div class="container">
-                    <p class="footer__text text-secondary">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <div class="socials">
-                        <ul class="socials__list list-reset">
-                            <li class="socials__item"><a href="#" class="socials__link link-reset"><span class="visually-hidden">facebook</span></a></li>
-                            <li class="socials__item"><a href="#" class="socials__link link-reset"><span class="visually-hidden">instagram</span></a></li>
-                            <li class="socials__item"><a href="#" class="socials__link link-reset"><span class="visually-hidden">google</span></a></li>
-                        </ul>
-                    </div>
                     <div class="footer__wrapper">
-                        <ul class="footer__list list-reset">
-                            <li class="footer__item"><h3 class="footer__title">Home</h3></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Booking</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Facilities</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Location</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Contact</a></li>
-                        </ul>
-                        <ul class="footer__list list-reset">
-                            <li class="footer__item"><h3 class="footer__title">Help</h3></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">About Us</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Help center</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Privacy policy</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">FAQs</a></li>
-                        </ul>
-                        <ul class="footer__list list-reset">
-                            <li class="footer__item"><h3 class="footer__title">Get the app</h3></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">iOS app</a></li>
-                            <li class="footer__item"><a href="" class="footer__link link-reset">Android app</a></li>
-                        </ul>
+                        <p class="footer__text text-secondary">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                        <div class="socials">
+                            <ul class="socials__list list-reset">
+                                <li class="socials__item"><a href="#" class="socials__link socials__link--fb link-reset"><span class="visually-hidden">facebook</span></a></li>
+                                <li class="socials__item"><a href="#" class="socials__link socials__link--inst link-reset"><span class="visually-hidden">instagram</span></a></li>
+                                <li class="socials__item"><a href="#" class="socials__link socials__link--google link-reset"><span class="visually-hidden">google</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__lists-wrapper">
+                            <ul class="footer__list list-reset">
+                                <li class="footer__item"><h3 class="footer__title">Home</h3></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Booking</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Facilities</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Location</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Contact</a></li>
+                            </ul>
+                            <ul class="footer__list list-reset">
+                                <li class="footer__item"><h3 class="footer__title">Help</h3></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">About Us</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Help center</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Privacy policy</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">FAQs</a></li>
+                            </ul>
+                            <ul class="footer__list list-reset">
+                                <li class="footer__item"><h3 class="footer__title">Get the app</h3></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">iOS app</a></li>
+                                <li class="footer__item"><a href="" class="footer__link link-reset">Android app</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </footer>

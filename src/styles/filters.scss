@@ -2,24 +2,75 @@
 
 .filters {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (width > var.$tablet-width) {
+        align-items: flex-start;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 20px;
+        gap: 5px;
 
+        @media screen and (width > var.$tablet-width) {
+            max-width: 400px;
+            text-align:  left;
+        }
     }
     
     &__item {
-        padding-block: 5px;
-        width: 100%;
-        border: 1px dotted var.$green-main;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 5px 5px 25px;
+        background-image: url('../../public/assets/vectors/filters-location-pin.svg');
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        background-position: 0 0;
+
+        @media screen and (width > var.$tablet-width) {
+            padding-left: 40px;
+        }
+    }
+
+    &__details {
+        color: var.$gray-555555;
+        font-size: 0.875rem;
+        line-height: 1rem;
     }
 
     &__button {
+        display: block;
         padding: 5px 15px;
         width: 125px;
         border-radius: 40px;
         background-color: var.$green-main;
-        color: #ffffff;
+        color: var.$white-main;
+        background-image: url('../../public/assets/vectors/button-search.svg');
+        background-repeat: no-repeat;
+        background-size: 26px 26px;
+        background-position: 10px 3px;
+
+        @media screen and (width > var.$tablet-width) {
+            padding-left: 45px;
+            width: 90px;
+        }
+    }
+
+    &--check-in {
+        background-image: url('../../public/assets/vectors/filters-checkIn-checkOut.svg');
+        order: 3;
+    }
+    
+    &--check-out {
+        background-image: url('../../public/assets/vectors/filters-checkIn-checkOut.svg');
+    }
+
+    &--guests {
+        background-image: url('../../public/assets/vectors/filters-guests.svg');
+        order: 2;
     }
 }

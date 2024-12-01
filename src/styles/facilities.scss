@@ -1,0 +1,63 @@
+@use 'variables'as var;
+
+.facilities {
+    padding-bottom: 20px;
+
+    @media screen and (width > var.$tablet-width) {
+        padding-bottom: 40px;
+    }
+
+    &__wrapper {
+        display: grid;
+        justify-items: center;
+
+        @media screen and (width > var.$tablet-width) {
+            justify-items: flex-start;
+        }
+    }
+
+    &__items-wrapper {
+
+        @media screen and (width > var.$tablet-width) {
+            justify-self: center;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+
+        @media screen and (width > var.$tablet-width) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__item {
+        padding: 7px;
+        text-align: center;
+        border: 1px solid var.$border-gray;
+    }
+
+    &__item img {
+        margin-bottom: 5px;    
+    }
+
+    &__item p {
+        color: var.$black-secondary;
+    }
+
+    &__button {
+        padding: 5px 16px;
+        width: 125px;
+        border-radius: 40px;
+        background-color: var.$green-main;
+        color: var.$white-main;
+        text-align: center;
+        margin-bottom: 15px;
+
+        @media screen and (width > var.$tablet-width) {
+            margin-bottom: 24px;
+        }
+    }
+}
