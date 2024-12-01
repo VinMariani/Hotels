@@ -3,10 +3,12 @@
 .facilities {
     padding-bottom: 1.25rem;
 
-    // padding-bottom: 20px;
-
     @media screen and (width > var.$tablet-width) {
         padding-bottom: 40px;
+    }
+
+    @media screen and (width > var.$desktop-width) {
+        padding-bottom: 120px;
     }
 
     &__wrapper {
@@ -16,12 +18,35 @@
         @media screen and (width > var.$tablet-width) {
             justify-items: flex-start;
         }
+
+        @media screen and (width > var.$desktop-width) {
+            grid-template-columns: 386px 870px;
+            grid-template-rows: 120px 120px 245px;
+            // grid-template-rows: 1fr 1fr 2fr;
+            grid-template-areas: 
+                                'title facility'
+                                'text facility'
+                                'button facility';
+            column-gap: 24px;
+        }
     }
 
     &__items-wrapper {
 
         @media screen and (width > var.$tablet-width) {
             justify-self: center;
+        }
+    }
+
+    &__title {
+        @media screen and (width > var.$desktop-width) {
+            grid-area: title;
+        }
+    }
+
+    &__text {
+        @media screen and (width > var.$desktop-width) {
+            grid-area: text;
         }
     }
 
@@ -33,16 +58,29 @@
         @media screen and (width > var.$tablet-width) {
             grid-template-columns: repeat(4, 1fr);
         }
+
+        @media screen and (width > var.$desktop-width) {
+            gap: 24px;
+        }
     }
 
     &__item {
         padding: 7px;
         text-align: center;
         border: 1px solid var.$border-gray;
+        border-radius: 8%;
+
+        @media screen and (width > var.$desktop-width) {
+            padding: 50px;
+        }
     }
 
     &__item img {
         margin-bottom: 5px;    
+
+        @media screen and (width > var.$desktop-width) {
+            margin-bottom: 24px;
+        }
     }
 
     &__item p {
@@ -57,9 +95,17 @@
         color: var.$white-main;
         text-align: center;
         margin-bottom: 15px;
+        font-weight: 600;
 
         @media screen and (width > var.$tablet-width) {
             margin-bottom: 24px;
+        }
+        
+        @media screen and (width > var.$desktop-width) {
+            grid-area: button;
+            width: 164px;
+            height: 56px;
+            line-height: 1.5rem;
         }
     }
 }

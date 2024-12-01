@@ -14,6 +14,10 @@
         justify-content: center;
         gap: 15px;
         align-items: center;
+
+        @media screen and (width > var.$desktop-width) {
+            justify-content: flex-start;
+        }
     }
 
     &__item {

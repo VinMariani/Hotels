@@ -8,6 +8,10 @@
         margin-bottom: 40px;
     }
 
+    @media screen and (width > var.$desktop-width) {
+        margin-bottom: 200px;
+    }
+
     &__wrapper {
         background-color: var.$white-secondary;
         padding: 1.25rem;

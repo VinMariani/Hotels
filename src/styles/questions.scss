@@ -1,0 +1,38 @@
+@use 'variables'as var;
+
+.questions {
+    padding-bottom: 1.25rem;
+
+    @media screen and (width > var.$tablet-width) {
+        padding-bottom: 40px;
+    }
+
+    @media screen and (width > var.$desktop-width) {
+        padding-bottom: 120px;
+    }
+
+    &__wrapper {
+        display: grid;
+        justify-items: center;
+
+        @media screen and (width > var.$tablet-width) {
+            justify-items: flex-start;
+        }
+
+        // @media screen and (width > var.$desktop-width) {
+        //     grid-template-columns: 386px 870px;
+        //     grid-template-rows: 120px 120px 245px;
+        //     // grid-template-rows: 1fr 1fr 2fr;
+        //     grid-template-areas: 
+        //                         'title facility'
+        //                         'text facility'
+        //                         'button facility';
+        //     column-gap: 24px;
+        // }
+    }
+
+    &__item {
+        border: 1px solid var.$black-main;
+        padding: 15px;
+    }
+}

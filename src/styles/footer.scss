@@ -7,6 +7,10 @@
         padding-bottom: 2.25rem;
     }
 
+    @media screen and (width > var.$desktop-width) {
+        padding-bottom: 3.9375rem;
+    }
+
     &__wrapper {
         display: grid;
 
@@ -15,6 +19,14 @@
             grid-template-areas:
                                 "text text socials"
                                 "links links links";
+        }
+
+        @media screen and (width > var.$desktop-width) {
+            grid-template-columns: 250px 785px;
+            column-gap: 165px;
+            grid-template-areas:
+                                "text links links"
+                                "socials links links";
         }
     }
 
@@ -54,6 +66,7 @@
         font-size: 1rem;
         line-height: 1.5rem;
         font-weight: 400;
+        color: var.$black-secondary;
     }
 
 }

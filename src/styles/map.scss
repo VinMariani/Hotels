@@ -1,7 +1,6 @@
 @use 'variables'as var;
 
 .map {
-    // padding-bottom: 1.25rem;
     padding: 1.25rem;
     max-width: 280px;
     margin: 0 auto;
@@ -21,10 +20,16 @@
         margin-bottom: 40px;
     }
 
+    @media screen and (width > var.$desktop-width) {
+        max-width: 1280px;
+        min-height: 677px;
+        margin-bottom: 200px;
+    }
+
     &__wrapper {
         @media screen and (width > var.$tablet-width) {
             display: grid;
-            column-gap: 20px;
+            // column-gap: 20px;
             grid-template-columns: 355px 250px;
             background-color: var.$white-main;
             border-radius: 16px;
@@ -35,6 +40,15 @@
             right: 20px;
         }
 
+        @media screen and (width > var.$tablet-width) {
+            padding: 20px 25px;
+        }
+
+        @media screen and (width > var.$desktop-width) {
+            grid-template-columns: 510px 482px;
+            padding: 44px 66px;
+            column-gap: 116px;
+        }
     }
 
     &__title { 
@@ -68,6 +82,11 @@
         @media screen and (width > var.$tablet-width) {
             max-width: 300px;
         }
+
+        @media screen and (width > var.$desktop-width) {
+            width: 436px;
+            padding: 14px 24px;
+        }
     }
 
     &__button {
@@ -77,11 +96,18 @@
         color: var.$white-main;
         text-align: center;
         font-size: 1rem;
+        font-weight: 600;
         line-height: 1.5rem;
         margin-left: -20px;
 
         @media screen and (width > var.$tablet-width) {
             max-width: 125px;
+        }
+
+        @media screen and (width > var.$desktop-width) {
+            padding: 14px 24px;
+            margin-left: -30px;
+            max-width: 165px;
         }
     }
 }

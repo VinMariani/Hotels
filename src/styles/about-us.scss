@@ -1,6 +1,6 @@
 @use 'variables'as var;
 
-.history {
+.about-us{
     padding: 1.25rem;
     background-color: var.$green-bg;
     max-width: 280px;
@@ -12,24 +12,42 @@
         display: grid;
         justify-content: flex-end;
         text-align: left;
-        background-image: url('../../public/assets/images/history-bg.webp');
-        background-repeat: no-repeat;
-        background-size: 50% 100%;
         margin-bottom: 40px;
         min-height: 377px;
         max-width: 645px;
         padding: 2.25rem;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 15%;
+            left: 3%;
+            width: 350px;
+            height: 550px;
+            background-image: url('../../public/assets/images/aboutUs-bg.webp');
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @media screen and (width > var.$desktop-width) {
+                top: -25px;
+                left: -25px;
+                width: 695px;
+                height: 665px;
+            }
+        }
     }
 
     @media screen and (width > var.$desktop-width) {
         margin-bottom: 7.5rem;
         max-width: 1280px;
-        min-height: 520px;
+        min-height: 503px;
         grid-template-columns: repeat(2, 1fr);
         padding-left: 70px;
         padding-top: 76px;
         padding-right: 85px;
-        column-gap: 130px;
+        column-gap: 190px;
     }
 
     &__wrapper {
@@ -50,16 +68,20 @@
         }
     }
 
-    &__text {
-        max-width: 300px;
-
+    &__title {
         @media screen and (width > var.$desktop-width) {
-            max-width: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__texts {
+        @media screen and (width > var.$desktop-width) {
+            margin-bottom: 0;
         }
     }
 
     &__button {
-        padding: 5px 15px;
+        padding: 5px 10px;
         width: 125px;
         border-radius: 40px;
         background-color: var.$green-main;
@@ -68,10 +90,10 @@
         font-size: 1rem;
         line-height: 1.5rem;
         font-weight: 600;
-    
+
         @media screen and (width > var.$desktop-width) {
             padding: 15px 25px;
             height: 24px;
         }
     }
-}
+}    

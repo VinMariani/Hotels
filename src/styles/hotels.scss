@@ -9,7 +9,7 @@
     }
 
     @media screen and (width > var.$desktop-width) {
-        // padding-bottom: 147px;
+        padding-bottom: 147px;
     }
 
     &__wrapper {
@@ -21,7 +21,11 @@
             display: flex;
             justify-content: space-between;
         }
-    
+
+        @media screen and (width > var.$desktop-width) {
+            margin-bottom: 40px;
+        }
+
     }
 
     &__button {
@@ -37,8 +41,12 @@
         @media screen and (width > var.$tablet-width) {
             max-height: 40px;
         }
-    
+    }
+
+    &__text {
         @media screen and (width > var.$desktop-width) {
+            max-width: 410px;
+            margin-bottom: 0;
         }
     }
 
@@ -117,10 +125,11 @@
     }
 
     &__name {
-
         font-size: 1.1rem;
         line-height: 1.6rem;
         margin-bottom: 0.625rem;
+        color: var.$black-secondary;
+        font-weight: 600;
 
         @media screen and (width > var.$desktop-width) {
             font-size: 1.5rem;

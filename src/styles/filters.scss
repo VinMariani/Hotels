@@ -10,6 +10,11 @@
         align-items: flex-start;
     }
 
+    @media screen and (width > var.$desktop-width) {
+        flex-direction: row;
+        background-color: var.$white-main;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -19,6 +24,19 @@
         @media screen and (width > var.$tablet-width) {
             max-width: 400px;
             text-align:  left;
+        }
+
+        @media screen and (width > var.$desktop-width) {
+            display: flex;
+            gap: 0;
+            max-width: 1000px;
+            top: 565px;
+            left: 140px;
+            position: absolute;
+            padding: 26px 30px;
+            padding-right: 120px;
+            background-color: var.$white-main;
+            border-radius: 35px;
         }
     }
     
@@ -31,9 +49,22 @@
         background-size: 30px 30px;
         background-position: 0 0;
 
+        &:not(:last-child) {
+            @media screen and (width > var.$desktop-width) {
+                border-right: 1px solid var.$border-gray;
+                margin-right: 30px;
+            }
+        }   
+
         @media screen and (width > var.$tablet-width) {
             padding-left: 40px;
         }
+
+        @media screen and (width > var.$desktop-width) {
+            padding-right: 30px;
+        }
+
+        
     }
 
     &__details {
@@ -58,11 +89,20 @@
             padding-left: 45px;
             width: 90px;
         }
+        @media screen and (width > var.$desktop-width) {
+            top: 565px;
+            left: 945px;
+            position: absolute;
+            height: 92px;
+            width: 130px;
+            border-radius: 40px;
+            background-position: 35px 35px;
+            text-align: center;
+        }
     }
 
     &--check-in {
         background-image: url('../../public/assets/vectors/filters-checkIn-checkOut.svg');
-        order: 3;
     }
     
     &--check-out {
@@ -71,6 +111,5 @@
 
     &--guests {
         background-image: url('../../public/assets/vectors/filters-guests.svg');
-        order: 2;
     }
 }
