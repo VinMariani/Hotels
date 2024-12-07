@@ -1,9 +1,9 @@
 export function showHotels() {
-    const hotelsListPopular= document.querySelector('.hotels__list');
+    const hotelsListPopular = document.querySelector('.hotels__list');
     const cardsPopular = hotelsListPopular.slice(0, 3);
 
     const hotelCardsContainer = document.querySelector('.hotels__slider');
-    hotelCardsContainer.innerHTML = cardsPopular.push();
+    hotelCardsContainer.innerHTML = hotelsListPopular.push(cardsPopular);
 }
 
 export function displayAllCards() {
