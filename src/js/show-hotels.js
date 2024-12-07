@@ -1,14 +1,22 @@
-export function showHotels() {
-    const hotelsListPopular = document.querySelector('.hotels__list');
-    const cardsPopular = hotelsListPopular.slice(0, 3);
+import { generateHotels } from "./generate-hotels.js";
+import { hotels } from "./hotels.js";
 
+export function showHotels() {
+    const hotelsList = document.getElementById('hotel-list')
+    const hotelsListPopular = document.querySelectorAll('.hotels__card');
     const hotelCardsContainer = document.querySelector('.hotels__slider');
-    hotelCardsContainer.innerHTML = hotelsListPopular.push(cardsPopular);
+    console.log(hotelsListPopular)
+
+    const cardsPopular = hotels.slice(0, 3);
+    console.log(cardsPopular)
+    hotelsList.remove();
+    generateHotels(cardsPopular);
 }
 
 export function displayAllCards() {
-    const hotelCardsContainer = document.querySelector('.hotels__slider');
-    hotelCardsContainer.innerHTML = hotelCards.push();
-}
+    const hotelsList = document.getElementById('hotel-list')
+    hotelsList.remove();
+    generateHotels(hotels);
+ }
 
 document.querySelector('.hotels__button').addEventListener('click', displayAllCards);

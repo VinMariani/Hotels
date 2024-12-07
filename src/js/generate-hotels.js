@@ -1,5 +1,6 @@
 export function generateHotels(hotels) {
   const hotelsList = document.createElement('ul');
+  hotelsList.id = 'hotel-list';
   
   hotels.forEach(hotel => {
     const hotelItem = document.createElement('li');
