@@ -54,12 +54,12 @@
 
         @media screen and (width > var.$tablet-width) {
             overflow-y: hidden;
-            height: 400px;
+            min-height: 400px;
         }
 
         @media screen and (width > var.$desktop-width) {
             overflow-y: hidden;
-            height: 480px;
+            min-height: 480px;
         }
     }
 

@@ -3,20 +3,29 @@
 .modal {
     opacity: 0;
     visibility: hidden;
-    width: 100%;
+    width: 80%;
     max-width: 500px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 4;
+    margin: 0 auto;
     
     box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
     text-align: center;
-    padding: 30px;
+    padding: 1.875rem;
     border-radius: 3px;
     background-color: var.$white-main;
-    transition: 0.3s all;
+    transition: 0.2s all;
+
+    @media screen and (width > var.$tablet-width) {
+        max-width: 690px;
+    }
+
+    @media screen and (width > var.$tablet-width) {
+        max-width: 1220px;
+    }
 
     &.active {
         opacity: 1;
@@ -32,5 +41,69 @@
         fill: var.$black-secondary;
         cursor: pointer;
      }
+
+     &__legend {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+
+        @media screen and (width > var.$tablet-width) {
+            font-size: 1.3rem;
+        }
+
+        @media screen and (width > var.$desktop-width) {
+            font-size: 1.5rem;
+            margin-bottom: 1.3rem;
+        }
+     }
+
+     &__input {
+        background-color: var.$white-secondary;
+        border: none;
+        border-radius: 5%;
+        padding: 5px 12px;
+        font-size: 0.875rem;
+        line-height: 1.75rem;
+
+
+        @media screen and (width > var.$tablet-width) {
+            width: 60%;
+            font-size: 1rem;
+        }
+
+        @media screen and (width > var.$desktop-width) {
+            padding: 14px 24px;
+            font-size: 1.3rem;
+        }
+    }
+
+     &__button {
+        padding: 5px 10px;
+        border-radius: 5%;
+        background-color: var.$green-main;
+        color: var.$white-main;
+        font-size: 0.875rem;
+
+        @media screen and (width > var.$tablet-width) {
+            font-size: 1rem;
+        }
+
+        @media screen and (width > var.$desktop-width) {
+            padding: 14px 24px;
+            font-size: 1.3rem;
+        }
+     }
+
+     &__text {
+        font-size: 1 rem; 
+        
+        @media screen and (width > var.$tablet-width) {
+            font-size: 1.2rem;
+        }
+    
+        @media screen and (width > var.$desktop-width) {
+            padding: 14px 24px;
+            font-size: 1.3rem;
+        }
+    }
  }
  

@@ -142,17 +142,23 @@
         </div>
         
         <div class="modal" data-modal="1">
-            <svg class="modal__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-            <p class="modal__title">Заголовок окна 1</p>
+            <svg class="modal__close js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+            <form class="modal__form" action="#" method="get">
+                <legend class="modal__legend">Оставьте свой телефон, и наш менеджер свяжется с Вами</legend>
+                <input class="modal__input" type="tel" id="phone-number" name="phone" placeholder="Ваш номер" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" >
+                <button class="modal__button button button-reset" type="submit">Жду звонка!</button>
+            </form>
          </div>
          
          <div class="modal" data-modal="2">
-            <svg class="modal__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-            <p class="modal__title">Заголовок окна 1</p>
+            <svg class="modal__close js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+            <h3 class="modal__title">Explore more about our history!</h3>
+            <p class="modal__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ab id, molestiae sit ipsum assumenda suscipit dignissimos doloremque quidem cumque explicabo, reprehenderit doloribus? Magnam quae voluptate consequuntur quas unde incidunt?</p>
          </div>
          
          <!-- Подложка под модальным окном -->
          <div class="overlay" id="overlay-modal"></div>
         <script type="module" src="/src/main.js"></script>
+        <script src="https://unpkg.com/element-closest"></script>
     </body>
 </html>
