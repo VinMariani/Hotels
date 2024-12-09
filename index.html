@@ -60,7 +60,7 @@
                             <div class="facilities__wrapper">
                                 <h2 class="facilities__title title-secondary">We do our best facilities provide you</h2>
                                 <p class="facilities__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p>
-                                <button class="button button-reset facilities__button" type='button' title="Contact Now">Contact Now</button>
+                                <button class="button button-reset facilities__button" type='button' title="Contact Now" data-modal="1" data-js-open-modal >Contact Now</button>
                                 <div class="facilities__items-wrapper"></div>
                             </div>
                     </section>
@@ -68,7 +68,7 @@
                             <div class="history__wrapper">
                                 <h2 class="history__title title-secondary">Discover our History</h2>
                                 <p class="history__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                <button class="history__button button button-reset" type='button' title="Explore More">Explore More</button>
+                                <button class="history__button button button-reset" type='button' title="Explore More" data-modal="2" data-js-open-modal >Explore More</button>
                             </div>
                     </section>
                     <section class="feedback">
@@ -96,10 +96,10 @@
                             <div class="map__wrapper">
                                 <h2 class="map__title title-secondary">Location of our Hotels</h2>
                                 <p class="map__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
-                                <div class="map__input-wrapper">
+                                <form class="map__form" action="#" method="get">
                                     <input class="map__input" type="email" name="" id="" placeholder="Enter your email">
                                     <button class="map__button button button-reset" type='button' title="Contact">Contact</button>
-                                </div>
+                                </form>
                             </div>
                     </section>
                 </main>
@@ -140,6 +140,19 @@
                 </footer>
             </div>
         </div>
+        
+        <div class="modal" data-modal="1">
+            <svg class="modal__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+            <p class="modal__title">Заголовок окна 1</p>
+         </div>
+         
+         <div class="modal" data-modal="2">
+            <svg class="modal__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+            <p class="modal__title">Заголовок окна 1</p>
+         </div>
+         
+         <!-- Подложка под модальным окном -->
+         <div class="overlay" id="overlay-modal"></div>
         <script type="module" src="/src/main.js"></script>
     </body>
 </html>

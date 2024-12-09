@@ -1,0 +1,36 @@
+@use 'variables' as var;
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    
+    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+    text-align: center;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: var.$white-main;
+    transition: 0.3s all;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__close {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        fill: var.$black-secondary;
+        cursor: pointer;
+     }
+ }
+ 
