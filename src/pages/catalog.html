@@ -9,8 +9,11 @@
         <div id="catalog" class="page__content">
             <div class="container">
                 <header class="header">
-                        <nav class="navigation">
-                            <div class="navigation__wrapper">
+                    <nav class="navigation navigation--closed navigation--nojs">
+                        <button class="navigation__toggle toggle" type="button">
+                            <span class="visually-hidden">Открыть меню</span>
+                        </button>
+                        <div class="navigation__wrapper">
                                 <ul class="navigation__list list-reset">
                                     <li class="navigation__item">
                                         <a href="../../index.html" class="navigation__link link-reset">Booking</a></li>
@@ -46,7 +49,7 @@
                             <div class="history__wrapper">
                                 <h2 class="history__title title-secondary">Discover our History</h2>
                                 <p class="history__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                <button class="history__button button button-reset" type='button' title="Explore More">Explore More</button>
+                                <button class="history__button button button-reset" type='button' title="Explore More" data-modal="2" data-js-open-modal >Explore More</button>
                             </div>
                     </section>
                     <section class="questions">
@@ -124,6 +127,14 @@
                 </footer>
                 </div>
             </div>
+            <div class="modal" data-modal="2">
+                <svg class="modal__close js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                <h3 class="modal__title">Explore more about our history!</h3>
+                <p class="modal__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ab id, molestiae sit ipsum assumenda suscipit dignissimos doloremque quidem cumque explicabo, reprehenderit doloribus? Magnam quae voluptate consequuntur quas unde incidunt?</p>
+             </div>
+             
+             <!-- Подложка под модальным окном -->
+             <div class="overlay" id="overlay-modal"></div>
         <script type="module" src="/src/main.js"></script>
     </body>
 </html>

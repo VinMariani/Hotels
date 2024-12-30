@@ -1,12 +1,11 @@
-@use 'variables'as var;
+@use 'variables' as var;
 
 .header {
-    padding-block: 12px;
-    max-width: 280px;
+    padding-block: 25px;
+    // max-width: 280px;
     margin: 0 auto;
 
     @media screen and (width > var.$tablet-width) {
-        padding-block: 24px;
         max-width: 690px;
     }
 

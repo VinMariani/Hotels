@@ -1,0 +1,37 @@
+@use 'variables' as var;
+
+.toggle {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 13px;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+
+  @media screen and (width > var.$tablet-width) {
+    display: none;
+  }
+}
+
+.navigation--closed .toggle {
+  background-image: url("./../../public/assets/vectors/burger-menu.svg");
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+
+  @media screen and (width > var.$tablet-width) {
+    background-size: 35px 35px;
+  }
+}
+
+.navigation--opened .toggle {
+  background-image: url("./../../public/assets/vectors/burger-menu-close.svg");
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+}
+
+.navigation--nojs .toggle {
+  display: none;
+}

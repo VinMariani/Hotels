@@ -11,7 +11,10 @@
         <div id="app" class="page__content">
             <div class="container">
                 <header class="header">
-                        <nav class="navigation">
+                        <nav class="navigation navigation--closed navigation--nojs">
+                            <button class="navigation__toggle toggle" type="button">
+                                <span class="visually-hidden">Открыть меню</span>
+                            </button>
                             <div class="navigation__wrapper">
                                 <ul class="navigation__list list-reset">
                                     <li class="navigation__item">
@@ -144,9 +147,9 @@
         <div class="modal" data-modal="1">
             <svg class="modal__close js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
             <form class="modal__form" action="#" method="get">
-                <legend class="modal__legend">Оставьте свой телефон, и наш менеджер свяжется с Вами</legend>
-                <input class="modal__input" type="tel" id="phone-number" name="phone" placeholder="Ваш номер" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" >
-                <button class="modal__button button button-reset" type="submit">Жду звонка!</button>
+                <legend class="modal__legend">Our manager will call you as soon as possible</legend>
+                <input class="modal__input" type="tel" id="phone-number" name="phone" placeholder="Your phone number" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" >
+                <button class="modal__button button button-reset" type="submit">Call me!</button>
             </form>
          </div>
          

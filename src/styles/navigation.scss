@@ -1,4 +1,4 @@
-@use 'variables'as var;
+@use 'variables' as var;
 
 .navigation {
     @media screen and (width > var.$desktop-width) {
@@ -7,38 +7,65 @@
 
 
     &__wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
 
         @media screen and (width > var.$tablet-width) {
             gap: 93px;
+            flex-direction: row;
             flex-wrap: nowrap;
+            padding-top: 0;
         }
-    
+
+
         @media screen and (width > var.$desktop-width) {
+            position: static;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             gap: 326px;
-        }
+          }
     }
 
     &__list {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
+        // min-width: 280px;
+        // max-width: 560px;
+        background-color: var.$green-bg;
+        margin-bottom: 0.5rem;
+
+        @media screen and (width > var.$tablet-width) {
+            flex-direction: row;            
+            flex-wrap: nowrap;
+            justify-content: center;
+            background-color: var.$white-main;
+            margin-bottom: 0;
+        }
     
         @media screen and (width > var.$desktop-width) {
             align-items: center;
         }
     }
 
+    &__item {
+        min-width: 250px;
+
+        @media screen and (width > var.$tablet-width) {
+            min-width: 60px;
+        }
+    }
+
     &__link {
         display: block;
-        padding-inline: 7px;
-        padding-block: 3px;
+        padding-inline: 1rem;
+        padding-block: 2rem;
         color: var.$black-secondary;
+        text-align: center;
 
         @media screen and (width > var.$tablet-width) {
             padding: 1rem;
+            padding-block: 0.5rem;
+            min-width: 67px;
         }
     
         @media screen and (width > var.$desktop-width) {
@@ -50,9 +77,10 @@
 
     &__button {
         background-color: var.$green-main;
-        padding: 5px 15px;
+        padding: 20px 15px;
         border-radius: 40px;
         color: var.$white-main;
+        text-align: center;
 
         @media screen and (width > var.$tablet-width) {
             padding: 5px;
@@ -69,3 +97,37 @@
         }
     }
 }
+
+
+  .navigation--opened .navigation__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var.$white-main;
+    padding-top: 0.7rem;
+    margin-right: 1rem;
+
+  }
+  
+  .navigation--closed .navigation__wrapper {
+    display: none;
+  
+    @media screen and (width > var.$tablet-width) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    @media screen and (width > var.$tablet-width) {
+        justify-content: space-between;
+    }
+  }
+  
+  .navigation--nojs .navigation__wrapper {
+    @media screen and (width > var.$tablet-width) {
+      display: block;
+    }
+  }

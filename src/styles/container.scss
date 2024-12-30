@@ -1,8 +1,9 @@
-@use 'variables'as var;
+@use 'variables' as var;
 
 .container {
     padding-inline: var.$mobile-padding-x;
-    max-width: 280px;
+    min-width: 280px;
+    max-width: 560px;
 
     @media screen and (width > var.$tablet-width) {
         padding-inline: var.$tablet-padding-x;

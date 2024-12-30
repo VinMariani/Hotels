@@ -13,12 +13,11 @@
     }
 
     &__wrapper {
-        display: grid;
-        justify-items: center;
+        display: flex;
+        justify-content: space-between;
         margin-bottom: 20px;
 
         @media screen and (width > var.$tablet-width) {
-            display: flex;
             justify-content: space-between;
         }
 

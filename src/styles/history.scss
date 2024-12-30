@@ -3,7 +3,7 @@
 .history {
     padding: 1.25rem;
     background-color: var.$green-bg;
-    max-width: 280px;
+    // max-width: 280px;
     margin: 0 auto;
     margin-bottom: 20px;
     border-radius: 16px;
@@ -51,7 +51,7 @@
     }
 
     &__text {
-        max-width: 300px;
+        // max-width: 300px;
 
         @media screen and (width > var.$desktop-width) {
             max-width: 100%;
@@ -59,7 +59,7 @@
     }
 
     &__button {
-        padding: 5px 15px;
+        padding: 10px 15px;
         width: 125px;
         border-radius: 40px;
         background-color: var.$green-main;

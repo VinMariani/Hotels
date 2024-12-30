@@ -8,6 +8,9 @@ import { generateHotels } from './js/generate-hotels.js';
 import { generateFacilities } from './js/generate-facilities.js';
 import { facilities } from './js/facilities.js';
 import { showHotels } from './js/show-hotels.js';
+import { showBurgerMenu } from './js/show-burger-menu.js';
+import { removeBurgerButton } from './js/remove-burger-button.js';
+
 
 // import { displayAllCards } from './js/show-hotels.js';
 
@@ -17,7 +20,9 @@ if (counter) {
 };
 
 setTimeout(() => generateHotels(hotels), 1000);
-setTimeout(() => generateFacilities(facilities), 1000);
+if (facilities) {
+  setTimeout(() => generateFacilities(facilities), 1000);
+}
 setTimeout(() => showHotels(), 1000);
 // setTimeout(() => displayAllCards(), 1000);
 
@@ -63,3 +68,6 @@ overlay.addEventListener('click', function() {
   document.querySelector('.modal.active').classList.remove('active');
   this.classList.remove('active');
 });
+
+showBurgerMenu();
+removeBurgerButton();
