@@ -1,51 +1,52 @@
-import Swiper from "swiper";
-import { Navigation, Thumbs } from 'swiper/modules';
+import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
 
-export function swiperThumbs() {
-  const galleryThumbsElement = document.querySelector('.gallery-thumbs');
-  if (galleryThumbsElement === null) return;
+const swiperIntro = document.querySelector('.swiper-intro');
+const swiperIntroGallery = document.querySelectorAll('.swiper-intro-gallery');
+const swiperIntroGalleryThumbs = document.querySelectorAll('.swiper-intro-gallery-thumbs');
 
-  var galleryThumbs = new Swiper(galleryThumbsElement, {
-    direction: 'horizontal',
-    slidesPerView: 5,
-    spaceBetween: 10,
-    // freeMode: true,
-    // watchOverflow: true,
-    // watchSlidesVisibility: true,
-    // watchSlidesProgress: true,
-    // centeredSlides: true,
-    // centeredSlidesBounds: true,
-    breakpoints: {
-      768: {
-        direction: 'vertical',
-      }
-    }
-  });
+export function initSwipers() {
+  if (swiperIntro) {
+    const swiper = new Swiper(swiperIntro, {
+      modules: [Pagination],
+      noSwiping: false,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      draggable: true,
+    });
+  }
+  if (swiperIntroGallery.length > 0) {
+    swiperIntroGallery.forEach((gallery, index) => {
+      const thumbs = swiperIntroGalleryThumbs[index];
 
-  var galleryMain = new Swiper('.gallery-main', {
-    modules: [Navigation, Thumbs],
-    watchOverflow: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    preventInteractionOnTransition: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
-    thumbs: {
-      swiper: galleryThumbs
-    }
-  });
+      const galleryThumbs = new Swiper(thumbs, {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        centeredSlides: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        slideToClickedSlide: true,
+        draggable: true,
+        noSwiping: false, nested: true,
+      })
 
-  galleryMain.on('slideChangeTransitionStart', function () {
-    galleryThumbs.slideTo(galleryMain.activeIndex);
-  });
+      const gallerySwiper = new Swiper(gallery, {
+        draggable: true,
+        noSwiping: false,
+        nested: true,
+        thumbs: {
+          swiper: galleryThumbs
+        }
+      })
 
-  galleryThumbs.on('transitionStart', function () {
-    galleryMain.slideTo(galleryThumbs.activeIndex);
-  });
+      galleryThumbs.on('slideChange', () => {
+        gallerySwiper.slideTo(galleryThumbs.activeIndex)
+      })
+      gallerySwiper.on('slideChange', () => {
+        galleryThumbs.slideTo(gallerySwiper.activeIndex)
+      })
+    })
+  }
 }

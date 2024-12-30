@@ -10,7 +10,7 @@ import { facilities } from './js/facilities.js';
 import { showHotels } from './js/show-hotels.js';
 import { showBurgerMenu } from './js/show-burger-menu.js';
 import { removeBurgerButton } from './js/remove-burger-button.js';
-
+import { initSwipers } from './js/swiper.js';
 
 // import { displayAllCards } from './js/show-hotels.js';
 
@@ -43,7 +43,7 @@ modalButtons.forEach(function(button) {
     });
 });
 
-// закрытие по крестику
+// закрытие МО по крестику
 closeButtons.forEach(function(button) {
   button.addEventListener('click', function(event) {
     const parentModal = this.closest('.modal');
@@ -69,5 +69,13 @@ overlay.addEventListener('click', function() {
   this.classList.remove('active');
 });
 
-showBurgerMenu();
-removeBurgerButton();
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  initTabs();
+  showBurgerMenu();
+  removeBurgerButton();
+  initSwipers();
+});
+
