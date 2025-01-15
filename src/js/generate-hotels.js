@@ -13,6 +13,7 @@ export function generateHotels(hotels) {
     hotelImage.setAttribute('src', hotel.img);
     hotelImage.setAttribute('width', 300);
     hotelImage.setAttribute('class', 'hotels__img');
+    hotelImage.setAttribute('alt', hotel.alt);
     hotelsList.setAttribute('class', 'hotels__list list-reset');
     hotelItem.setAttribute('class', 'hotels__card');
     hotelSubtitle.setAttribute('class', 'hotels__subtitle');

@@ -29,14 +29,12 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // min-width: 280px;
-        // max-width: 560px;
         background-color: var.$green-bg;
         margin-bottom: 0.5rem;
 
         @media screen and (width > var.$tablet-width) {
             flex-direction: row;            
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             justify-content: center;
             background-color: var.$white-main;
             margin-bottom: 0;
