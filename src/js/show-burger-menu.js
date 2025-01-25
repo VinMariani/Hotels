@@ -1,7 +1,8 @@
+const nav = document.querySelector('.navigation');
+const navToggle = document.querySelector('.navigation__toggle');
+
 export function showBurgerMenu() {
-    const nav = document.querySelector('.navigation');
-    const navToggle = document.querySelector('.navigation__toggle');
-  
+
     nav.classList.remove('navigation--nojs');
   
     navToggle.addEventListener('click', () => {
@@ -14,3 +15,5 @@ export function showBurgerMenu() {
       }
     });
   }
+
+  

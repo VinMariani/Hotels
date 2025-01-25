@@ -2,7 +2,7 @@ const nav = document.querySelector('.navigation');
 const navToggle = document.querySelector('.navigation__toggle');
 
 
-function getWindowWidth() {
+export function getWindowWidth() {
   return window.innerWidth;
 }
 

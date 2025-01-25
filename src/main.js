@@ -1,31 +1,22 @@
 import '/public/styles/style.scss'
-// import { setupCounter } from './js/counter.js'
-// import { initTabs } from './js/tabs.js'
-import { hotels } from "./js/hotels.js";
-import { facilities } from './js/facilities.js';
-import { showBurgerMenu } from './js/show-burger-menu.js';
-import { removeBurgerButton } from './js/remove-burger-button.js';
 import { initSwipers } from './js/swiper.js';
-
 
 const facilitis_list = document.querySelector('.facilities')
 const hotels_list = document.querySelector('.hotels')
 const modalButtons = document.querySelectorAll('[data-js-open-modal]');
-const hotelsButton = document.querySelector('.hotels__button');
+const viewHotelsButton = document.querySelector('.hotels__button');
+const burgerButton = document.querySelector('.navigation__toggle');
 
-// для чего этот код?
-// const counter = document.querySelector('.counter');
-// if (counter) {
-//   setupCounter(counter);
-// };
 
 async function loadModules() {
   if (facilitis_list) {
+    const {facilities} = await import('./js/facilities.js')
     const {generateFacilities} = await import('./js/generate-facilities.js');
     generateFacilities(facilities);
   }
 
   if (hotels_list) {
+    const {hotels} = await import('./js/hotels.js');
     const {generateHotels} = await import('./js/generate-hotels.js');
     generateHotels(hotels);
   }
@@ -35,20 +26,26 @@ async function loadModules() {
     initModals();
   }
 
-  if (hotelsButton) {
+  if (viewHotelsButton) {
     const {toggleText} = await import('./js/hotels-button-text-toggle.js');
     const {showHotels} = await import('./js/show-hotels.js');
     const {displayAllCards} = await import('./js/show-hotels.js');
     showHotels();
+  }
+
+  if (burgerButton) {
+    const {showBurgerMenu} = await import('./js/show-burger-menu.js');
+    const {removeBurgerButton} = await import('./js/remove-burger-button.js');
+    const {getWindowWidth} = await import('./js/remove-burger-button.js');
+    getWindowWidth();
+    showBurgerMenu();
+    removeBurgerButton();
   }
 }
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  // initTabs();
-  showBurgerMenu();
-  removeBurgerButton();
   initSwipers();
   loadModules();
 });
