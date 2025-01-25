@@ -1,0 +1,20 @@
+@use 'variables' as var;
+
+.rate {
+    display: flex;
+    margin-bottom: 41px;
+
+    & > span {
+        color: var.$black-secondary;
+        font-weight: 700;
+        font-size: 1.15rem;
+        line-height: 1.3rem;
+        padding-right: 27px;
+        border-right: 1px solid #DDDDDD;
+        margin-right: 34px;
+    }
+
+    & > div {
+        display: flex;
+    }
+}

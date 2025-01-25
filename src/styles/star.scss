@@ -1,0 +1,10 @@
+@use 'variables' as var;
+
+.star {
+    & + span {
+        color: var.$black-secondary;
+        font-size: 1.15rem;
+        line-height: 1.3rem;
+        display: block;
+    }
+}
