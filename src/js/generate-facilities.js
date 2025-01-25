@@ -1,6 +1,13 @@
 export function generateFacilities(facilities) {
     const facilitiesList = document.createElement('ul');
 
+    const wrapper = document.querySelector('.facilities__items-wrapper');
+
+    // Если контейнер не найден, завершаем выполнение функции
+    if (!wrapper) {
+        return;
+    }
+
     facilities.forEach(facility => {
         const facilityItem = document.createElement('li');
         const facilityImage = document.createElement('img');

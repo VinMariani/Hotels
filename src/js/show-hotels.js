@@ -1,5 +1,8 @@
 import { generateHotels } from "./generate-hotels.js";
 import { hotels } from "./hotels.js";
+import { toggleText } from "./hotels-button-text-toggle.js";
+
+const viewHotelsButton = document.querySelector('.hotels__button');
 
 export function showHotels() {
     const hotelsList = document.getElementById('hotel-list')
@@ -27,19 +30,6 @@ export function displayAllCards() {
     generateHotels(cardsPopular);
  }
 
-const viewHotelsButton = document.querySelector('.hotels__button');
-// viewHotelsButton.addEventListener('click', displayAllCards); // -- работало
-
-
-export function toggleText() {
-
-    const viewHotelsButton = document.querySelector('.hotels__button');
-    if (viewHotelsButton.textContent == "View all") {
-        viewHotelsButton.textContent = "Hide all";
-    } else {
-     viewHotelsButton.textContent = "View all";
-    };
-}
 
 viewHotelsButton.addEventListener('click', function() {
     viewHotelsButton.classList.toggle('hotels__button--active');
@@ -51,5 +41,3 @@ viewHotelsButton.addEventListener('click', function() {
         toggleText();
     }
 })
-
-

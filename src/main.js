@@ -1,81 +1,55 @@
-!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
-
 import '/public/styles/style.scss'
-import { setupCounter } from './js/counter.js'
-import { initTabs } from './js/tabs.js'
+// import { setupCounter } from './js/counter.js'
+// import { initTabs } from './js/tabs.js'
 import { hotels } from "./js/hotels.js";
-import { generateHotels } from './js/generate-hotels.js';
-import { generateFacilities } from './js/generate-facilities.js';
 import { facilities } from './js/facilities.js';
-import { showHotels } from './js/show-hotels.js';
 import { showBurgerMenu } from './js/show-burger-menu.js';
 import { removeBurgerButton } from './js/remove-burger-button.js';
 import { initSwipers } from './js/swiper.js';
 
-// import { displayAllCards } from './js/show-hotels.js';
 
-const counter = document.querySelector('.counter');
-if (counter) {
-  setupCounter(counter);
-};
-
-setTimeout(() => generateHotels(hotels), 1000);
-if (facilities) {
-  setTimeout(() => generateFacilities(facilities), 1000);
-}
-setTimeout(() => showHotels(), 1000);
-// setTimeout(() => displayAllCards(), 1000);
-
-
-// для модальных окон
+const facilitis_list = document.querySelector('.facilities')
+const hotels_list = document.querySelector('.hotels')
 const modalButtons = document.querySelectorAll('[data-js-open-modal]');
-const overlay = document.querySelector('#overlay-modal'); 
-const closeButtons = document.querySelectorAll('.js-modal-close');
+const hotelsButton = document.querySelector('.hotels__button');
 
-modalButtons.forEach(function(button) {
-    button.addEventListener('click', function(event) {
-        event.preventDefault();
-        const modalId = this.getAttribute('data-modal');
-        const modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+// для чего этот код?
+// const counter = document.querySelector('.counter');
+// if (counter) {
+//   setupCounter(counter);
+// };
 
-        modalElem.classList.add('active');
-        overlay.classList.add('active'); 
-    });
-});
+async function loadModules() {
+  if (facilitis_list) {
+    const {generateFacilities} = await import('./js/generate-facilities.js');
+    generateFacilities(facilities);
+  }
 
-// закрытие МО по крестику
-closeButtons.forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    const parentModal = this.closest('.modal');
+  if (hotels_list) {
+    const {generateHotels} = await import('./js/generate-hotels.js');
+    generateHotels(hotels);
+  }
 
-    parentModal.classList.remove('active');
-    overlay.classList.remove('active');
-  })
-});
+  if (modalButtons) {
+    const {initModals} = await import('./js/initModals.js');
+    initModals();
+  }
 
-// закрытие по кнопке esc
-document.body.addEventListener('keyup', function(event) {
-  const key = event.key;
-
-  if (key == 'Escape') {
-    document.querySelector('.modal.active').classList.remove('active');
-    document.querySelector('.overlay.active').classList.remove('active');
-  };
-}, false);
-
-// закрытие по тыку на подложку
-overlay.addEventListener('click', function() {
-  document.querySelector('.modal.active').classList.remove('active');
-  this.classList.remove('active');
-});
-
+  if (hotelsButton) {
+    const {toggleText} = await import('./js/hotels-button-text-toggle.js');
+    const {showHotels} = await import('./js/show-hotels.js');
+    const {displayAllCards} = await import('./js/show-hotels.js');
+    showHotels();
+  }
+}
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  initTabs();
+  // initTabs();
   showBurgerMenu();
   removeBurgerButton();
   initSwipers();
+  loadModules();
 });
 
