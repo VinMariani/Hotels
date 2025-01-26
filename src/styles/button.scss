@@ -21,4 +21,13 @@
             width: 76px;
         }
     }
+
+    &--secondary {
+        border-radius: 40px;
+        background-color: var.$green-bg;
+        color: var.$green-main;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
 }
