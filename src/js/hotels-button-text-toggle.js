@@ -9,8 +9,8 @@ export function toggleText() {
     }
 
     if (viewHotelsButton.textContent === "View all") {
-        viewHotelsButton.textContent = "Hide all";
-    } else if (viewHotelsButton.textContent === "Hide all") {
+        viewHotelsButton.textContent = "Hide";
+    } else if (viewHotelsButton.textContent === "Hide") {
         viewHotelsButton.textContent = "View all";
     }
 }

@@ -53,11 +53,13 @@
     &__list {
         display: grid;
         // grid-template-columns: repeat(2, 1fr);
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
         gap: 5px;
 
         @media screen and (width > var.$tablet-width) {
-            grid-template-columns: repeat(4, 1fr);
+            // grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
         }
 
         @media screen and (width > var.$desktop-width) {

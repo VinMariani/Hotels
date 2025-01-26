@@ -11,7 +11,15 @@
   
     &__gallery {
       width: 50%;
-      margin-right: 86px;
+      margin-right: 30px;
+
+      @media screen and (width > var.$tablet-width) {
+        margin-right: 50px;
+      }
+
+      @media screen and (width > var.$desktop-width) {
+        margin-right: 86px;
+      }
   
       &:hover {
         .review {

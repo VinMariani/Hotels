@@ -1,13 +1,17 @@
 @use 'variables'as var;
 
 .intro {
-    @media screen and (width > var.$tablet-width) {
+    margin-bottom: 20px;
 
+    @media screen and (width > var.$tablet-width) {
+        margin-bottom: 40px;
     }
     
     @media screen and (width > var.$desktop-width) {
         margin-bottom: 120px;
-    }@media screen and (width > var.$tablet-width) {
+    }
+    
+    @media screen and (width > var.$tablet-width) {
 
     }
     

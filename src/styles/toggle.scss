@@ -9,7 +9,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
 
   @media screen and (width > var.$tablet-width) {
     display: none;

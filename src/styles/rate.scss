@@ -5,16 +5,25 @@
     margin-bottom: 41px;
 
     & > span {
+
         color: var.$black-secondary;
         font-weight: 700;
-        font-size: 1.15rem;
+        font-size: 0.85rem;
         line-height: 1.3rem;
-        padding-right: 27px;
+        padding-right: 15px;
         border-right: 1px solid #DDDDDD;
-        margin-right: 34px;
+        margin-right: 15px;
+        
+        @media screen and (width > var.$desktop-width) {
+            font-size: 1.15rem;
+            line-height: 1.3rem;
+            padding-right: 27px;
+
+        }
     }
 
     & > div {
         display: flex;
+        align-items: center;
     }
 }

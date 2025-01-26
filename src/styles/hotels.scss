@@ -66,8 +66,9 @@
         display: grid;
 
         @media screen and (width > var.$tablet-width) {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 15px;
+            justify-items: center;
         }
 
         @media screen and (width > var.$desktop-width) {

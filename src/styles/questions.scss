@@ -2,37 +2,98 @@
 
 .questions {
     padding-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
 
     @media screen and (width > var.$tablet-width) {
         padding-bottom: 40px;
+        flex-direction: row;
+        gap: 40px;
     }
 
     @media screen and (width > var.$desktop-width) {
         padding-bottom: 120px;
+        gap: 82px;
     }
 
     &__wrapper {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         justify-items: center;
 
         @media screen and (width > var.$tablet-width) {
             justify-items: flex-start;
         }
 
-        // @media screen and (width > var.$desktop-width) {
-        //     grid-template-columns: 386px 870px;
-        //     grid-template-rows: 120px 120px 245px;
-        //     // grid-template-rows: 1fr 1fr 2fr;
-        //     grid-template-areas: 
-        //                         'title facility'
-        //                         'text facility'
-        //                         'button facility';
-        //     column-gap: 24px;
-        // }
+        @media screen and (width > var.$desktop-width) {
+            flex-direction: column;
+        }
+    }
+
+    &__title span {
+        color: var.$green-main;
+    }
+    &__accordion {
+        width: 100%;
+        max-width: 682px;
+        margin: 0 auto; 
     }
 
     &__item {
         border: 1px solid var.$black-main;
-        padding: 15px;
+        padding: 27px 30px; 
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
     }
+  
+    &__question {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var.$gray-0C1623;
+        cursor: pointer;
+        list-style: none; 
+        position: relative;
+        padding-right: 30px; 
+        // margin-bottom: 16px;
+  }
+  
+    &__question::-webkit-details-marker {
+        display: none; 
+  }
+  
+    &__question::after {
+        content: ""; 
+        background-image: url('../../public/assets/vectors/arrow-down.svg');
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease; 
+  }
+
+    &__item[open] &__question {
+        margin-bottom: 16px;
+    }
+
+    &__item[open] &__question::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    &__item[open] &__answer {
+        min-height: auto; 
+    }
+  
+    &__answer {
+        font-size: 1rem;
+        color: var.$gray-1D263A;
+        // для анимаций
+        min-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+  }
 }

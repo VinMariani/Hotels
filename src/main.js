@@ -1,15 +1,13 @@
 import '/public/styles/style.scss'
 import { initSwipers } from './js/swiper.js';
-// import {showStars} from './js/rating-stars';
-
 
 const facilitis_list = document.querySelector('.facilities')
 const hotels_list = document.querySelector('.hotels')
 const modalButtons = document.querySelectorAll('[data-js-open-modal]');
 const viewHotelsButton = document.querySelector('.hotels__button');
 const burgerButton = document.querySelector('.navigation__toggle');
-// const rating = document.querySelector('.rating')
 const ratingContainers = document.querySelectorAll('.rating'); 
+const questions = document.querySelector('.questions');
 
 
 async function loadModules() {
@@ -52,9 +50,12 @@ async function loadModules() {
       showStars(container);
     });
   }
+
+  if (questions) {
+    const {initAccordion} = await import('./js/rating-stars.js');
+    initAccordion();
+  }
 }
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
   initSwipers();

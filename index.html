@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hotels</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
     </head>
     <body class="page__body">
         <div id="app" class="page__content">
@@ -22,7 +22,7 @@
                                     <li class="navigation__item">
                                         <a href="#facilities" class="navigation__link link-reset">Facilities</a></li>
                                     <li class="navigation__item">
-                                        <a href="#" class="navigation__link link-reset">About us</a></li>
+                                        <a href="javascript:void(0)" class="navigation__link link-reset">About us</a></li>
                                     <li class="navigation__item">
                                         <a href="#location" class="navigation__link link-reset">Location</a></li>
                                     <li class="navigation__item">
@@ -83,13 +83,13 @@
                                             <p class="feedback__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                             <p class="feedback__name">Alexandr Ivchenko</p>
                                             <p class="feedback__profession">Businessman</p>
-                                            <img src="./public/assets/images/guests-AlexandrIvchenko.avif" alt="Foto of Alexandr Ivchenko" class="feedback__img" width="150" height="150">
+                                            <img src="./public/assets/images/guests-AlexandrIvchenko.avif" alt="Foto of Alexandr Ivchenko" class="feedback__img" width="150" height="150" loading="lazy">
                                         </div>
                                         <div class="swiper-slide">
                                             <p class="feedback__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                             <p class="feedback__name">Ivan Ivanov</p>
                                             <p class="feedback__profession"></p>
-                                            <img src="./public/assets/images/guests-IvanIvanov.avif" alt="Foto of Ivan Petrov" class="feedback__img" width="150" height="150">
+                                            <img src="./public/assets/images/guests-IvanIvanov.avif" alt="Foto of Ivan Petrov" class="feedback__img" width="150" height="150" loading="lazy">
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +100,8 @@
                                 <h2 class="map__title title-secondary">Location of our Hotels</h2>
                                 <p class="map__text text-secondary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
                                 <form class="map__form" action="#" method="get">
-                                    <input class="map__input" type="email" name="" id="" placeholder="Enter your email">
+                                    <label for="email" class="visually-hidden">Enter your email</label>
+                                    <input class="map__input" type="email" id="email" name="email" placeholder="Enter your email">
                                     <button class="map__button button button-reset" type='button' title="Contact">Contact</button>
                                 </form>
                             </div>
@@ -113,9 +114,9 @@
                             </p>
                             <div class="socials">
                                 <ul class="socials__list list-reset">
-                                    <li class="socials__item"><a href="#" class="socials__link socials__link--fb link-reset"><span class="visually-hidden">facebook</span></a></li>
-                                    <li class="socials__item"><a href="#" class="socials__link socials__link--inst link-reset"><span class="visually-hidden">instagram</span></a></li>
-                                    <li class="socials__item"><a href="#" class="socials__link socials__link--google link-reset"><span class="visually-hidden">google</span></a></li>
+                                    <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link--fb link-reset" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><span class="visually-hidden">facebook</span></a></li>
+                                    <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link--inst link-reset" aria-label="instagram" target="_blank" rel="noopener noreferrer"><span class="visually-hidden">instagram</span></a></li>
+                                    <li class="socials__item"><a href="javascript:void(0)" class="socials__link socials__link--google link-reset" aria-label="google" target="_blank" rel="noopener noreferrer"><span class="visually-hidden">google</span></a></li>
                                 </ul>
                             </div>
                             <div class="footer__lists-wrapper">
@@ -144,24 +145,24 @@
             </div>
         </div>
         
-        <div class="modal" data-modal="1">
-            <svg class="modal__close js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+        <div class="modal" data-modal="1" aria-hidden="true" role="dialog" aria-labelledby="modal-title-1">
+            <svg class="modal__close js-modal-close" aria-label="Close modal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
             <form class="modal__form" action="#" method="get">
-                <legend class="modal__legend">Our manager will call you as soon as possible</legend>
-                <input class="modal__input" type="tel" id="phone-number" name="phone" placeholder="Your phone number" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" >
+                <h3 class="modal__title" id="modal-title-1">Our manager will call you as soon as possible</h3>
+                <label for="phone-number" class="visually-hidden">Your phone number</label>
+                <input class="modal__input" type="tel" id="phone-number" name="phone" placeholder="Your phone number" required pattern="^(\+7|8)[\s(]?\d{3}[)\s]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$" title="Введите номер в формате +7 (XXX) XXX-XX-XX или 8 (XXX) XXX-XX-XX">
                 <button class="modal__button button button-reset" type="submit">Call me!</button>
             </form>
          </div>
          
-         <div class="modal" data-modal="2">
-            <svg class="modal__close js-modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
-            <h3 class="modal__title">Explore more about our history!</h3>
+         <div class="modal" data-modal="2" aria-hidden="true" role="dialog" aria-labelledby="modal-title-2">
+            <svg class="modal__close js-modal-close" aria-label="Close modal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+            <h3 class="modal__title" id="modal-title-2">Explore more about our history!</h3>
             <p class="modal__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ab id, molestiae sit ipsum assumenda suscipit dignissimos doloremque quidem cumque explicabo, reprehenderit doloribus? Magnam quae voluptate consequuntur quas unde incidunt?</p>
          </div>
          
          <!-- Подложка под модальным окном -->
          <div class="overlay" id="overlay-modal"></div>
         <script type="module" src="/src/main.js"></script>
-        <script src="https://unpkg.com/element-closest"></script>
     </body>
 </html>
