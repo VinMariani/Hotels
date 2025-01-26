@@ -55,19 +55,10 @@
 
     &__button {
       padding: 5px 5px;
-      width: 125px;
-      border-radius: 40px;
-      background-color: var.$green-main;
-      color: var.$white-main;
-      text-align: center;
-      font-size: 1rem;
-      line-height: 1.5rem;
-      font-weight: 600;
-      
+      width: 125px;      
 
       @media screen and (width > var.$desktop-width) {
           padding: 10px 25px;
-          height: 24px;
           align-self: flex-end;
       }
   }

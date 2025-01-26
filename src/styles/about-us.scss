@@ -82,13 +82,6 @@
     &__button {
         padding: 5px 10px;
         width: 125px;
-        border-radius: 40px;
-        background-color: var.$green-main;
-        color: var.$white-main;
-        text-align: center;
-        font-size: 1rem;
-        line-height: 1.5rem;
-        font-weight: 600;
 
         @media screen and (width > var.$desktop-width) {
             padding: 15px 25px;

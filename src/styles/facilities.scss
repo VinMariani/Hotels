@@ -52,13 +52,12 @@
 
     &__list {
         display: grid;
-        // grid-template-columns: repeat(2, 1fr);
         grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
         gap: 5px;
 
         @media screen and (width > var.$tablet-width) {
-            // grid-template-columns: repeat(4, 1fr);
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
+            // grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
             gap: 15px;
         }
 
@@ -91,14 +90,9 @@
     }
 
     &__button {
-        padding: 10px 16px;
+        padding: 10px 15px;
         width: 125px;
-        border-radius: 40px;
-        background-color: var.$green-main;
-        color: var.$white-main;
-        text-align: center;
         margin-bottom: 15px;
-        font-weight: 600;
 
         @media screen and (width > var.$tablet-width) {
             margin-bottom: 24px;
@@ -107,8 +101,10 @@
         @media screen and (width > var.$desktop-width) {
             grid-area: button;
             width: 164px;
-            height: 56px;
+            height: fit-content;
             line-height: 1.5rem;
+            border-radius: 40px;
+            padding: 20px 10px;
         }
     }
 }

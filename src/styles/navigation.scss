@@ -73,25 +73,9 @@
         }
     }
 
-    &__button {
-        background-color: var.$green-main;
-        padding: 20px 15px;
-        border-radius: 40px;
-        color: var.$white-main;
-        text-align: center;
-
-        @media screen and (width > var.$tablet-width) {
-            padding: 5px;
-            max-height: 40px;
-            width: 80px;
-            text-align: center;
-        }
-    
+    &__button {    
         @media screen and (width > var.$desktop-width) {
-            border-radius: 35%;
-            font-size: 0.875rem;
-            line-height: 1.25rem;
-            width: 76px;
+            padding: 10px 20px;
         }
     }
 }
